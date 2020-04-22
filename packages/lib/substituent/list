@@ -1,0 +1,21 @@
+#####This file is used to record the fragment type#################################
+
+fragment_01        _Br.pdb
+
+fragment_02        _CF3.pdb
+
+fragment_03        _CH3.pdb
+
+fragment_04        _Cl.pdb
+
+fragment_05        _COOH.pdb
+
+fragment_06        _F.pdb
+
+fragment_07        _NH2.pdb
+
+fragment_08        _NO2.pdb
+
+fragment_09        _OCH3.pdb
+
+fragment_10        _OH.pdb

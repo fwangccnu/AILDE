@@ -1,0 +1,15 @@
+//DIRECTORIES
+working root directory: ./temp
+fragments directory: /yp_home/wufx/CSO/substituent_test/fragment/fragment_01
+scripts directory: /yp_home/wufx/soft/Autogrow2.0/scripts
+
+//INPUT FILES
+initial ligand: ./pfvs_core.pdb
+
+//EVOLUTION PARAMETERS
+number of carryovers: 1
+number of children: 1
+number of mutants: 1
+max number atoms: 500
+receptor radius: 10
+number of generations: 1

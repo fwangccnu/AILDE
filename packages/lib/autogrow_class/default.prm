@@ -1,0 +1,22 @@
+//DIRECTORIES
+working root directory: /home/soft/Autogrow2.0/run_dir
+fragments directory: /home/soft/Autogrow2.0/fragment/large_fragment
+scripts directory: /home/soft/Autogrow2.0/scripts
+
+//INPUT FILES
+initial ligand: /home/haogf/autogrow/nsc16209.pdb
+receptor: /home/haogf/autogrow/1XDN.pdb
+
+//AUTODOCK PARAMETERS
+autodock grid center: 39.000 21.500 13.500
+autodock box size: 15 15 15
+
+//EVOLUTION PARAMETERS
+number of carryovers: 10
+number of children: 20
+number of mutants: 20
+max number atoms: 500
+receptor location: 38.754 26.297 9.154
+receptor radius: 10
+indices of hydrogens that are not linkers: -1
+number of generations: 8

@@ -1,0 +1,54 @@
+#!/bin/bash
+
+##############1. Setting the inviroment variables###########################################################################
+
+###########PYTHON###########################################################################################################
+PYTHON=/yp_home/public/soft/system_soft/PYTHON/2.7.9                                                                       #
+PATH=$PYTHON/bin:$PATH                                                                                                     #
+export PYTHON PATH                                                                                                         #
+############################################################################################################################
+
+#####################This is for AMBER16####################################################################################
+AMBERHOME=/yp_home/public/soft/md_simulation/AMBER/amber16                                                                 #
+PATH=$AMBERHOME/bin:$PATH                                                                                                  # 
+export LD_LIBRARY_PATH=$AMBERHOME/lib:$LD_LIBRARY_PATH                                                                     #      
+export AMBERHOME PATH                                                                                                      #
+source /yp_home/public/soft/md_simulation/AMBER/amber16/amber.sh                                                           #
+#############Cuda 8.0 ToolKit#####################################                                                         #
+CUDA_HOME=/yp_home/public/lib/cuda8.0                                                                                      #
+export PATH=$PATH:/yp_home/public/lib/cuda8.0/bin                                                                          #
+export LD_LIBRARY_PATH=/yp_home/public/lib/cuda8.0/lib64:$LD_LIBRARY_PATH                                                  #
+export LD_LIBRARY_PATH=/yp_home/public/lib/cuda8.0/lib:$LD_LIBRARY_PATH                                                    # 
+export CUDA_HOME                                                                                                           #
+##################################################################                                                         # 
+
+##############intel_MPI###########################################                                                         #
+source /yp_home/public/lib/intel/impi_5.0.3/intel64/bin/mpivars.sh                                                         #
+##################################################################                                                         #
+
+#####################This is for JAVA#######################################################################################       
+export JAVA_HOME=/yp_home/public/soft/system_soft/JAVA/jdk1.8.0_151                                                        #
+export CLASSPATH=:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar                                                           #
+export PATH=$JAVA_HOME/bin:$PATH                                                                                           #
+############################################################################################################################       
+
+#####################This is for openbabel##################################################################################       
+BABEL_HOME=/yp_home/user/soft/openbabel-2.3.2/                                                                             #
+PATH=$BABEL_HOME/bin:$PATH                                                                                                 #
+export BABEL_HOME PATH                                                                                                     #
+export LD_LIBRARY_PATH=$BABEL_HOME/lib:$LD_LIBRARY_PATH                                                                    #
+############################################################################################################################       
+
+#####################This is for ChemAxon###################################################################################       
+PATH=$PATH:/yp_home/public/soft/multifunction_soft/ChemAxon/JChem/bin                                                      #
+############################################################################################################################       
+
+
+echo "Starting Job at `date`" > ./time.log
+
+#####2. Submit the AILDE job#################################
+python AILDE_run_all.py parameter.txt
+
+#####6. Write the finish time###############################
+echo "Ending Job at `date`" >> ./time.log
+

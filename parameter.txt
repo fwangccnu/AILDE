@@ -1,0 +1,31 @@
+########this file is used to specify the parameters#############
+#########1.specify the complex file#########################################################
+
+step             01-18              #default: total 15 steps, use '-' or ',' to specify the step
+                                   #e.g. 01,03,04,05,06   or  01-07,10-15 
+                                   #sapce is not allowed when link the number
+#########2.specify the complex file#########################################################
+complex          com.pdb          #default: com.pdb
+
+#########3.specify the ligand name##########################################################
+ligand_name      LIG               #default: LIG
+
+#########4.specify the ligand name charge###################################################
+ligand_charge    gas               #default: gas
+
+#########5.whether to use parallel##########################################################
+parallel         YES               #default: YES and 4 process
+
+#########6.MD job settings##################################################################
+MDstart          3                 #default: 3  should be more than 3 and smaller than MDend
+MDend            15                #default: 15
+
+#########7.mm_pbsa.in locations#############################################################
+mm_pbsa          ./packages/files/mmpbsa/mm_pbsa.in   #must be specified
+
+#########8.md refine request################################################################
+md_request       NO                #default: NO
+
+#########9.entropy calculation file locations###############################################
+entropy         ./packages/files/entropy/             #must be specified
+
